@@ -40,5 +40,9 @@ public class SpringSecurityController {
         return (CsrfToken) request.getAttribute("_csrf");
     }
 
-
+    @PostMapping("/login")//JWT
+    public String loginUser(@RequestBody UserPojo userPojo) {
+        System.out.println("LoginUser");
+        return userService.verify(userPojo);
+    }
 }
