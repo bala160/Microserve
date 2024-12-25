@@ -13,7 +13,7 @@ public class DepedencyInjectionApplication {
 	public static void main(String[] args) {
 
 		ApplicationContext context = SpringApplication.run(DepedencyInjectionApplication.class, args);
-		Dev dev = context.getBean(Dev.class);
+		Dev dev = context.getBean(Dev.class); // Instead of creating object taken from spring bean container
 		dev.call();
 	}
 
